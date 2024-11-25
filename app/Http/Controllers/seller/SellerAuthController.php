@@ -8,6 +8,34 @@ use Illuminate\Http\Request;
 
 class SellerAuthController extends Controller
 {
+    // public function login(Request $request)
+    // {
+    //     $credentials = $request->validate([
+    //         'email' => 'required|email',
+    //         'password' => 'required',
+    //     ]);
+
+    //     if (Auth::guard('admin')->attempt($credentials)) {
+    //         $request->session()->regenerate();
+    //         return redirect()->intended('/admin/dashboard');
+    //     }
+
+    //     return back()->withErrors([
+    //         'email' => 'The provided credentials do not match our records.',
+    //     ]);
+    // }
+
+    /**
+     * Show the seller login form.
+     */
+    public function showLoginForm()
+    {
+        return view('seller.login.login');
+    }
+
+    /**
+     * Handle a seller login request.
+     */
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -15,13 +43,25 @@ class SellerAuthController extends Controller
             'password' => 'required',
         ]);
 
-        if (Auth::guard('admin')->attempt($credentials)) {
+        if (Auth::guard('seller')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/admin/dashboard');
+            return redirect()->intended('/seller/dashboard');
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    /**
+     * Logout the seller.
+     */
+    public function logout(Request $request)
+    {
+        Auth::guard('seller')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/seller/login');
     }
 }

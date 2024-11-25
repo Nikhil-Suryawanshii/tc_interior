@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class AdminAuthController extends Controller
 {
+
+    public function showLoginForm()
+    {
+        return view('admin.login.login');
+    }
+
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -23,5 +29,14 @@ class AdminAuthController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/admin/login');
     }
 }
