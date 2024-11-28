@@ -62,3 +62,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Login system  Admin / Seller
+
+ login functionality is done belowing is pending work
+ 1. forget password
+ 2. remeber me
+ 3. seller register page
+
+## frontend add main page 
+1. frontend template/assets
+2. user login page
+3. user register page
+4. user page main
+

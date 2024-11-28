@@ -16,7 +16,7 @@ use App\Http\Controllers\seller\SellerAuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.dashboard');
 });
 
 Route::get('/dashboard', function () {
@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
