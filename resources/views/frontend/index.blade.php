@@ -1,6 +1,6 @@
 
 @extends('frontend.dashboard')
-@section('main')
+@section('frontend')
 
 
 <main class="main">

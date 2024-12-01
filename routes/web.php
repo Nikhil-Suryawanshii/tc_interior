@@ -16,7 +16,7 @@ use App\Http\Controllers\seller\SellerAuthController;
 */
 
 Route::get('/', function () {
-    return view('frontend.dashboard');
+    return view('frontend.index');
 });
 
 Route::get('/dashboard', function () {
