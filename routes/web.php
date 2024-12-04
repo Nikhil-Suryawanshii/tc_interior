@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AdminAuthController;
 use App\Http\Controllers\seller\SellerAuthController;
-
+use App\Http\Controllers\admin\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +37,13 @@ Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AdminAuthController::class, 'login']);
     Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+    Route::get('/create', [StudentController::class, 'create'])->name('student.create');
+    Route::post('/store', [StudentController::class, 'store'])->name('student.store');
+    Route::get('/index', [StudentController::class, 'index'])->name('student.index');
+    Route::get('/edit/{id}', [StudentController::class, 'edit'])->name('student.edit');
+    Route::post('/update/{id}', [StudentController::class, 'update'])->name('student.update');
+    Route::get('/delete/{id}', [StudentController::class, 'delete'])->name('student.delete');
 });
 
 // Seller Routes
