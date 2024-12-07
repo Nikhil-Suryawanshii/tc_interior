@@ -39,9 +39,9 @@
             <li> <a href="{{ route('student.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
             {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
-            </li>
+            </li>--}}
             <li> <a href="{{ route('student.index') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
-            </li> --}}
+            </li> 
             {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
             </li>
             <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
