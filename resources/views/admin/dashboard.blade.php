@@ -29,7 +29,6 @@
 	<link rel="stylesheet" href="{{ asset('adminbackend/assets/css/header-colors.css') }}" />
 	<title>Rukada - Responsive Bootstrap 5 Admin Template</title>
 </head>
-
 <body>
 	<!--wrapper-->
 	<div class="wrapper">
