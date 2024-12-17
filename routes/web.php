@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\AdminAuthController;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\admin\CustomerController;
-use App\Http\Controllers\admin\EmployeeController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\admin\AdminAuthController;
 use App\Http\Controllers\seller\SellerAuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,8 +49,8 @@ Route::prefix('admin')->group(function () {
      Route::get('/student/edit/{id}',[StudentController::class,'edit'])->name('student.edit');
      Route::put('/student/update/{id}',[StudentController::class,'update'])->name('student.update');
      Route::get('/student/delete/{id}', [StudentController::class, 'delete'])->name('student.delete');
- 
- 
+
+
      //Customer Routes
      Route::get('/customer/create',[CustomerController::class,'create'])->name('customer.create');
      Route::get('/customer/list',[CustomerController::class,'list'])->name('customer.list');
@@ -57,7 +58,7 @@ Route::prefix('admin')->group(function () {
      Route::get('/customer/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
      Route::put('/customer/update/{id}',[CustomerController::class,'update'])->name('customer.update');
      Route::get('/customer/delete/{id}', [CustomerController::class, 'delete'])->name('customer.delete');
- 
+
      //Employee Routes
      Route::get('/employee/create',[EmployeeController::class,'create'])->name('employee.create');
      Route::get('/employee/list',[EmployeeController::class,'list'])->name('employee.list');
