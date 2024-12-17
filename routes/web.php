@@ -42,7 +42,6 @@ Route::prefix('admin')->group(function () {
     Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
      //Students Routes
-
      Route::get('/student/create',[StudentController::class,'create'])->name('student.create');
      Route::get('/student/list',[StudentController::class,'list'])->name('student.list');
      Route::post('/student/store',[StudentController::class, 'store'])->name('student.store');

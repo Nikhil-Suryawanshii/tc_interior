@@ -1,4 +1,4 @@
-@extends('admin.admin_dashboard')
+@extends('admin.dashboard')
 @section('admin')
     <div class="row">
         <div class="col-xl-8 mx-auto">

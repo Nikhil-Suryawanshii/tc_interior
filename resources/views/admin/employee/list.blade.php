@@ -1,4 +1,4 @@
-@extends('admin.admin_dashboard')
+@extends('admin.dashboard')
 @section('admin')
     <div class="page-content">
         <!--breadcrumb-->
@@ -75,12 +75,12 @@
                                     <td>{{ $employee->gender }}</td>
                                     <td>{{ $employee->state }}</td>
                                     <td>
-                                    
+
                                     <div class="d-flex employee-actions">
                                         <a href="{{ route('employee.edit',$employee->id) }}" class=""><i class='bx bxs-edit'></i></a>
                                         <a href="{{ route('employee.delete',$employee->id) }}" class="ms-3"><i class='bx bxs-trash'></i></a>
                                     </div>
-                                        
+
                                     </td>
                                 </tr>
                             @endforeach

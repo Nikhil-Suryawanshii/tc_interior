@@ -1,4 +1,4 @@
-@extends('admin.admin_dashboard')
+@extends('admin.dashboard')
 @section('admin')
     <div class="row">
         <div class="col-xl-8 mx-auto">
@@ -11,7 +11,7 @@
                         </div>
                         <h5 class="mb-0 text-primary">Customer Registration</h5>
                     </div>
-                    <hr>       
+                    <hr>
                     <form action="{{ route('customer.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
                         @csrf
                         <div class="col-md-6">
@@ -43,11 +43,11 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputGender" class="form-label">Gender</label><br>
-                            <input type="radio" name="gender" value="male" id="genderMale" {{ old('gender') == 'male' ? 'checked' : '' }}> 
+                            <input type="radio" name="gender" value="male" id="genderMale" {{ old('gender') == 'male' ? 'checked' : '' }}>
                             <label for="genderMale">Male</label>
-                            <input type="radio" name="gender" value="female" id="genderFemale" {{ old('gender') == 'female' ? 'checked' : '' }}> 
+                            <input type="radio" name="gender" value="female" id="genderFemale" {{ old('gender') == 'female' ? 'checked' : '' }}>
                             <label for="genderFemale">Female</label>
-                            <input type="radio" name="gender" value="other" id="genderOther" {{ old('gender') == 'other' ? 'checked' : '' }}> 
+                            <input type="radio" name="gender" value="other" id="genderOther" {{ old('gender') == 'other' ? 'checked' : '' }}>
                             <label for="genderOther">Other</label>
                         </div>
                         <div class="col-md-6">
