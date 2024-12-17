@@ -1,5 +1,7 @@
 @extends('admin.dashboard')
 @section('admin')
+<div class="page-wrapper">
+    <div class="page-content">
     <div class="row">
         <div class="col-xl-8 mx-auto">
             <h6 class="mb-0 text-uppercase">Customer Form Details</h6>
@@ -73,6 +75,8 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 @endsection
 <script>
     function previewImage(event) {

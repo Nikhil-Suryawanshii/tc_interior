@@ -1,5 +1,7 @@
 @extends('admin.dashboard')
 @section('admin')
+<div class="page-wrapper">
+    <div class="page-content">
     <div class="row">
         <div class="col-xl-8 mx-auto">
             <h6 class="mb-0 text-uppercase">Employee Edit Details</h6>
@@ -64,6 +66,7 @@
                         <div class="col-12">
                             <label for="inputFile" class="form-label">File</label>
                             <input type="file" name="file" class="form-control" id="inputFile">
+                            {{ old('file', $employee->file) }}
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary px-5">Submit</button>
@@ -73,6 +76,8 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 @endsection
 <script>
     function previewImage(event) {

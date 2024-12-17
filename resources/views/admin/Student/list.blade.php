@@ -63,10 +63,13 @@
                         </thead>
                         <tbody>
                             @foreach($students as $student)
-                                <tr>
-                                    <td>{{ $student->id }}</td>
+                                <tr onclick="window.location='{{ route('student.edit', $student->id) }}'" style="cursor: pointer;">
+                                    <td>{{ $loop->iteration }}</td>
                                     <td>
-                                            <img id="showImage" src="{{ (!empty($student->profile_image)) ? url('upload/student_upload/',$student->profile_image) : url('upload/No_Image_Available.jpg') }}" alt="student"  style="height:30px; width:30px;">
+                                        <img id="showImage"
+                                             src="{{ (!empty($student->profile_image)) ? url('upload/student_upload/'.$student->profile_image) : url('upload/No_Image_Available.jpg') }}"
+                                             alt="student"
+                                             style="height:30px; width:30px;">
                                     </td>
                                     <td>{{ $student->name }}</td>
                                     <td>{{ $student->surname }}</td>
@@ -76,12 +79,10 @@
                                     <td>{{ $student->gender }}</td>
                                     <td>{{ $student->state }}</td>
                                     <td>
-
-                                    <div class="d-flex Student-actions">
-                                        <a href="{{ route('student.edit',$student->id) }}" class=""><i class='bx bxs-edit'></i></a>
-                                        <a href="{{ route('student.delete',$student->id) }}" class="ms-3"><i class='bx bxs-trash'></i></a>
-                                    </div>
-
+                                        <div class="d-flex Student-actions">
+                                            <a href="{{ route('student.edit', $student->id) }}"><i class='bx bxs-edit'></i></a>
+                                            <a href="{{ route('student.delete', $student->id) }}" class="ms-3"><i class='bx bxs-trash'></i></a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

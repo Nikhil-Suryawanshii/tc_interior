@@ -63,7 +63,7 @@
                         </thead>
                         <tbody>
                             @foreach($customers as $customer)
-                                <tr>
+                            <tr onclick="window.location='{{ route('customer.edit', $customer->id) }}'" style="cursor: pointer;">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
                                             <img id="showImage" src="{{ (!empty($customer->profile_image)) ? url('upload/customer_upload/',$customer->profile_image) : url('upload/No_Image_Available.jpg') }}" alt="customer"  style="height:30px; width:30px;">
