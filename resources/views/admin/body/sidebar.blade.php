@@ -33,14 +33,60 @@
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon"><i class="bx bx-category"></i>
             </div>
-            <div class="menu-title">Application</div>
+            <div class="menu-title">Student</div>
         </a>
         <ul>
             <li> <a href="{{ route('student.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
             {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
             </li>--}}
-            <li> <a href="{{ route('student.index') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
+            <li> <a href="{{ route('student.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
+            </li> 
+            {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
+            </li>
+            <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
+            </li>
+            <li> <a href="app-invoice.html"><i class="bx bx-right-arrow-alt"></i>Invoice</a>
+            </li>
+            <li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Calendar</a>
+            </li> --}}
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" class="has-arrow">
+            <div class="parent-icon"><i class="bx bx-category"></i>
+            </div>
+            <div class="menu-title">Customer</div>
+        </a>
+        <ul>
+            <li> <a href="{{ route('customer.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            </li>
+            {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
+            </li>--}}
+            <li> <a href="{{ route('customer.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
+            </li> 
+            {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
+            </li>
+            <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
+            </li>
+            <li> <a href="app-invoice.html"><i class="bx bx-right-arrow-alt"></i>Invoice</a>
+            </li>
+            <li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Calendar</a>
+            </li> --}}
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" class="has-arrow">
+            <div class="parent-icon"><i class="bx bx-category"></i>
+            </div>
+            <div class="menu-title">Employee</div>
+        </a>
+        <ul>
+            <li> <a href="{{ route('employee.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            </li>
+            {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
+            </li>--}}
+            <li> <a href="{{ route('employee.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
             </li> 
             {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
             </li>

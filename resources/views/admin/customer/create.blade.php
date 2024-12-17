@@ -1,18 +1,18 @@
-@extends('admin.dashboard')
+@extends('admin.admin_dashboard')
 @section('admin')
     <div class="row">
         <div class="col-xl-8 mx-auto">
-            <h6 class="mb-0 text-uppercase">Student Form Details</h6>
+            <h6 class="mb-0 text-uppercase">Customer Form Details</h6>
             <hr />
             <div class="card border-top border-0 border-4 border-primary">
                 <div class="card-body p-5">
                     <div class="card-title d-flex align-items-center">
                         <div><i class="bx bxs-user me-1 font-22 text-primary"></i>
                         </div>
-                        <h5 class="mb-0 text-primary">Student Registration</h5>
+                        <h5 class="mb-0 text-primary">Customer Registration</h5>
                     </div>
                     <hr>       
-                    <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
+                    <form action="{{ route('customer.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
                         @csrf
                         <div class="col-md-6">
                             <label for="inputFirstName" class="form-label">Name</label>
@@ -35,7 +35,7 @@
                             <input type="file" name="profile_image" class="form-control" id="inputProfileImage" onchange="previewImage(event)">
                         </div>
                         <div class="col-md-6">
-                            <img id="showImage" src="{{ (!empty($student->profile_image)) ? url('upload/student_upload/',$student->profile_image) : url('upload/No_Image_Available.jpg') }}" alt="student"  style="height:100px; width:100px;">
+                            <img id="showImage" src="{{ (!empty($customer->profile_image)) ? url('upload/customer_upload/',$customer->profile_image) : url('upload/No_Image_Available.jpg') }}" alt="customer"  style="height:100px; width:100px;">
                         </div>
                         <div class="col-md-6">
                             <label for="inputJoiningDate" class="form-label">Joining Date</label>

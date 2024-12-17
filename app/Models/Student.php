@@ -11,7 +11,13 @@ class Student extends Model
 
     protected $fillable = [
         'name',
+        'surname',
         'email',
-        'dob',
-       ];
+        'phone_number',
+        'profile_image',
+        'joining_date',
+        'gender',
+        'state',
+        'file',
+    ];
 }

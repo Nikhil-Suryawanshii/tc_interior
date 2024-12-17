@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\AdminAuthController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\admin\CustomerController;
+use App\Http\Controllers\admin\EmployeeController;
 use App\Http\Controllers\seller\SellerAuthController;
-use App\Http\Controllers\admin\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,12 +40,31 @@ Route::prefix('admin')->group(function () {
     Route::post('/login', [AdminAuthController::class, 'login']);
     Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-    Route::get('/create', [StudentController::class, 'create'])->name('student.create');
-    Route::post('/store', [StudentController::class, 'store'])->name('student.store');
-    Route::get('/index', [StudentController::class, 'index'])->name('student.index');
-    Route::get('/edit/{id}', [StudentController::class, 'edit'])->name('student.edit');
-    Route::post('/update/{id}', [StudentController::class, 'update'])->name('student.update');
-    Route::get('/delete/{id}', [StudentController::class, 'delete'])->name('student.delete');
+     //Students Routes
+
+     Route::get('/student/create',[StudentController::class,'create'])->name('student.create');
+     Route::get('/student/list',[StudentController::class,'list'])->name('student.list');
+     Route::post('/student/store',[StudentController::class, 'store'])->name('student.store');
+     Route::get('/student/edit/{id}',[StudentController::class,'edit'])->name('student.edit');
+     Route::put('/student/update/{id}',[StudentController::class,'update'])->name('student.update');
+     Route::get('/student/delete/{id}', [StudentController::class, 'delete'])->name('student.delete');
+ 
+ 
+     //Customer Routes
+     Route::get('/customer/create',[CustomerController::class,'create'])->name('customer.create');
+     Route::get('/customer/list',[CustomerController::class,'list'])->name('customer.list');
+     Route::post('/customer/store',[CustomerController::class, 'store'])->name('customer.store');
+     Route::get('/customer/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
+     Route::put('/customer/update/{id}',[CustomerController::class,'update'])->name('customer.update');
+     Route::get('/customer/delete/{id}', [CustomerController::class, 'delete'])->name('customer.delete');
+ 
+     //Employee Routes
+     Route::get('/employee/create',[EmployeeController::class,'create'])->name('employee.create');
+     Route::get('/employee/list',[EmployeeController::class,'list'])->name('employee.list');
+     Route::post('/employee/store',[EmployeeController::class, 'store'])->name('employee.store');
+     Route::get('/employee/edit/{id}',[EmployeeController::class,'edit'])->name('employee.edit');
+     Route::put('/employee/update/{id}',[EmployeeController::class,'update'])->name('employee.update');
+     Route::get('/employee/delete/{id}', [EmployeeController::class, 'delete'])->name('employee.delete');
 });
 
 // Seller Routes

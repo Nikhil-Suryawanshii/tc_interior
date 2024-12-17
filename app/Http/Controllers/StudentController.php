@@ -15,6 +15,9 @@ class StudentController extends Controller
         return view('admin.student.list', compact('students'));
     }
 
+    // public function create(){
+    //     return view('admin.student.create');
+    // }
     public function create(){
         return view('admin.student.create');
     }
