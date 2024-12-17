@@ -39,6 +39,7 @@
             <li> <a href="{{ route('student.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
             {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
+<<<<<<< HEAD
             </li>--}}
             <li> <a href="{{ route('student.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
             </li> 
@@ -88,6 +89,11 @@
             </li>--}}
             <li> <a href="{{ route('employee.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
             </li> 
+=======
+            </li> --}}
+            <li> <a href="{{ route('student.index') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
+            </li>
+>>>>>>> 08d4484993ae2611331322322ced50d60b0b7719
             {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
             </li>
             <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
