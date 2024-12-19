@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\Admin\LogController;
 use App\Http\Controllers\admin\AdminAuthController;
 use App\Http\Controllers\seller\SellerAuthController;
 
@@ -36,6 +37,10 @@ Route::prefix('admin')->group(function () {
             return view('admin.index');
         })->name('admin.dashboard');
     });
+    Route::get('/index', [LogController::class, 'index'])->name('admin.logs');
+    Route::get('/logs/view/{file}', [LogController::class, 'view'])->name('logs.view');
+    Route::get('/download/{file}', [LogController::class, 'download'])->name('logs.download');
+    Route::delete('/delete/{file}', [LogController::class, 'delete'])->name('logs.delete');
 
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AdminAuthController::class, 'login']);

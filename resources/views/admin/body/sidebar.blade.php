@@ -39,10 +39,9 @@
             <li> <a href="{{ route('student.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
             {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
-<<<<<<< HEAD
             </li>--}}
             <li> <a href="{{ route('student.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
-            </li> 
+            </li>
             {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
             </li>
             <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
@@ -65,7 +64,7 @@
             {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
             </li>--}}
             <li> <a href="{{ route('customer.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
-            </li> 
+            </li>
             {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
             </li>
             <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
@@ -88,12 +87,30 @@
             {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
             </li>--}}
             <li> <a href="{{ route('employee.list') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
-            </li> 
-=======
-            </li> --}}
-            <li> <a href="{{ route('student.index') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
             </li>
->>>>>>> 08d4484993ae2611331322322ced50d60b0b7719
+            {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
+            </li>
+            <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
+            </li>
+            <li> <a href="app-invoice.html"><i class="bx bx-right-arrow-alt"></i>Invoice</a>
+            </li>
+            <li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Calendar</a>
+            </li> --}}
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" class="has-arrow">
+            <div class="parent-icon"><i class="bx bx-category"></i>
+            </div>
+            <div class="menu-title">Logs</div>
+        </a>
+        <ul>
+            {{-- <li> <a href="{{ route('employee.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            </li> --}}
+            {{-- <li> <a href="{{ route('student.edit') }}"><i class="bx bx-right-arrow-alt"></i>Edit</a>
+            </li>--}}
+            <li> <a href="{{ route('admin.logs') }}"><i class="bx bx-right-arrow-alt"></i>Listing</a>
+            </li>
             {{-- <li> <a href="app-contact-list.html"><i class="bx bx-right-arrow-alt"></i>Contatcs</a>
             </li>
             <li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Todo List</a>
