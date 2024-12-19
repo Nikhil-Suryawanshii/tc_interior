@@ -45,6 +45,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AdminAuthController::class, 'login']);
     Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+    Route::get('/profile', [AdminAuthController::class, 'showProfile'])->name('admin.profile');
+    Route::post('/profile/store', [AdminAuthController::class, 'storeProfile'])->name('admin.profile.store');
 
      //Students Routes
      Route::get('/student/create',[StudentController::class,'create'])->name('student.create');
