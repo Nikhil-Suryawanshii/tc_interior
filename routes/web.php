@@ -37,6 +37,7 @@ Route::prefix('admin')->group(function () {
             return view('admin.index');
         })->name('admin.dashboard');
     });
+
     Route::get('/index', [LogController::class, 'index'])->name('admin.logs');
     Route::get('/logs/view/{file}', [LogController::class, 'view'])->name('logs.view');
     Route::get('/download/{file}', [LogController::class, 'download'])->name('logs.download');

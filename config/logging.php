@@ -46,7 +46,6 @@ return [
     |                    "custom", "stack"
     |
     */
-
     'channels' => [
         'stack' => [
             'driver' => 'stack',

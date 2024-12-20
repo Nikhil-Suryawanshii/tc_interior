@@ -11,7 +11,6 @@
                 @if(!empty($logs))
                     <div class="table-responsive">
                         <table class="table table-bordered">
-
                                 <thead>
                                     <tr>
                                         <th>Date</th>

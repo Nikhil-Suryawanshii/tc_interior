@@ -13,7 +13,6 @@ class LogController extends Controller
      public function index(Request $request)
      {
          $logFiles = File::files(storage_path('logs')); // Fetch all log files
-
          $logs = [];
 
          foreach ($logFiles as $file) {

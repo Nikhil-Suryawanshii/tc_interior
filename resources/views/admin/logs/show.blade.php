@@ -5,7 +5,6 @@
     <div class="page-content">
         <div class="container mt-4">
             <h3>Log [{{ $file }}]</h3>
-
             <div class="row mb-3">
                 <div class="col-md-6">
                     <p><strong>File path:</strong> {{ storage_path('logs/' . $file) }}</p>
