@@ -1,6 +1,6 @@
 @extends('admin.dashboard')
 @section('admin')
-
+<div class="page-wrapper">
 <div class="page-content">
     <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
@@ -14,7 +14,6 @@
                 </ol>
             </nav>
         </div>
-
     </div>
     <!--end breadcrumb-->
     <div class="container">
@@ -140,7 +139,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <script>
     function previewImage(event) {
         var input = event.target;
