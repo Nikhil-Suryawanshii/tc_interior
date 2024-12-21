@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 
 use Illuminate\Http\Request;
 use App\Models\Student;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
+
 class StudentController extends Controller
 {
 
@@ -32,33 +34,33 @@ class StudentController extends Controller
             'state' => 'required',
             'file' => 'nullable|file',
         ]);
-    
+
         $student = new Student();
         $student->fill($request->all());
-    
+
         if ($request->hasFile('profile_image')) {
             $file = $request->file('profile_image');
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('upload/student_upload'), $imageName);
             $student->profile_image = $imageName;
         }
-    
+
         if ($request->hasFile('file')) {
             $fileName = time() . '_' . $request->file('file')->getClientOriginalName();
             $request->file('file')->move(public_path('upload/student_files'), $fileName);
             $student->file = $fileName;
         }
-    
+
         $student->save();
-    
+
         $notification = array(
             'message' => 'Student Profile Created Successfully',
             'alert-type' => 'success'
         );
-    
+
         return redirect()->route('student.list')->with($notification);
     }
-    
+
 
     public function edit($id){
         $student = Student::findOrFail($id);
@@ -80,10 +82,10 @@ class StudentController extends Controller
             'state' => 'required',
             'file' => 'nullable|file',
         ]);
-    
+
         $student = Student::findOrFail($id);
         $student->fill($request->all());
-    
+
         if ($request->hasFile('profile_image')) {
             // Delete the old profile image if it exists
             if ($student->profile_image) {
@@ -98,7 +100,7 @@ class StudentController extends Controller
             $file->move(public_path('upload/student_upload'), $imageName);
             $student->profile_image = $imageName;
         }
-    
+
         if ($request->hasFile('file')) {
             // Delete the old file if it exists
             if ($student->file) {
@@ -113,17 +115,17 @@ class StudentController extends Controller
             $file->move(public_path('upload/student_files'), $fileName);
             $student->file = $fileName;
         }
-    
+
         $student->save();
-    
+
         $notification = array(
             'message' => 'Student Profile Updated Successfully',
             'alert-type' => 'success'
         );
-    
+
         return redirect()->route('student.list')->with($notification);
     }
-    
+
 
 
     public function delete($id)
@@ -132,7 +134,7 @@ class StudentController extends Controller
 
     $student->delete();
 
-    
+
     $notification = array(
         'message' => 'Student Profile Deleted Successfully',
         'alert-type' => 'success'

@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\LogController;
-use App\Http\Controllers\admin\AdminAuthController;
-use App\Http\Controllers\seller\SellerAuthController;
+use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\Seller\SellerAuthController;
 
 /*
 |--------------------------------------------------------------------------
