@@ -23,44 +23,51 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'surname' => 'required',
-            'email' => 'required|email|unique:students',
-            'phone_number' => 'required',
-            'profile_image' => 'nullable|image',
-            'joining_date' => 'required|date',
-            'gender' => 'required',
-            'state' => 'required',
-            'file' => 'nullable|file',
-        ]);
-
+        // Validate the incoming request data
+        // $request->validate([
+        //     'name' => 'required',
+        //     'surname' => 'required',
+        //     'email' => 'required|email|unique:students',
+        //     'phone_number' => 'required',
+        //     'profile_image' => 'nullable|image',
+        //     'joining_date' => 'required|date',
+        //     'gender' => 'required',
+        //     'state' => 'required',
+        //     'file' => 'nullable|file',
+        // ]);
+    
+        // Create a new Student instance
         $student = new Student();
         $student->fill($request->all());
-
+    
+        // Handle profile image upload
         if ($request->hasFile('profile_image')) {
             $file = $request->file('profile_image');
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('upload/student_upload'), $imageName);
             $student->profile_image = $imageName;
         }
-
+    
+        // Handle file upload
         if ($request->hasFile('file')) {
-            $fileName = time() . '_' . $request->file('file')->getClientOriginalName();
-            $request->file('file')->move(public_path('upload/student_files'), $fileName);
+            $file = $request->file('file');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('upload/student_files'), $fileName);
             $student->file = $fileName;
         }
-
+    
+        // Save the student record to the database
         $student->save();
-
+    
+        // Set up notification for successful save
         $notification = array(
             'message' => 'Student Profile Created Successfully',
             'alert-type' => 'success'
         );
-
+    
+        // Redirect back to the student list page with the notification
         return redirect()->route('student.list')->with($notification);
     }
-
 
     public function edit($id){
         $student = Student::findOrFail($id);

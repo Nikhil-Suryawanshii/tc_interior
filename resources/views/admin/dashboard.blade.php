@@ -27,6 +27,10 @@
 	<link rel="stylesheet" href="{{ asset('adminbackend/assets/css/dark-theme.css') }}" />
 	<link rel="stylesheet" href="{{ asset('adminbackend/assets/css/semi-dark.css') }}" />
 	<link rel="stylesheet" href="{{ asset('adminbackend/assets/css/header-colors.css') }}" />
+
+	{{-- toster cdn css --}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
 	<title>Rukada - Responsive Bootstrap 5 Admin Template</title>
 
 
@@ -86,6 +90,9 @@
 	  <script src="{{ asset('adminbackend/assets/js/index.js') }}"></script>
 	<!--app JS-->
 	<script src="{{ asset('adminbackend/assets/js/app.js') }}"></script>
+
+	
+
 	<script>
 		$(document).ready(function() {
 			$('#example').DataTable();
@@ -102,6 +109,33 @@
 				.appendTo( '#example2_wrapper .col-md-6:eq(0)' );
 		} );
 	</script>
+
+
+	
+    {{-- toster cdn and script --}}
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+    <script>
+     @if(Session::has('message'))
+     var type = "{{ Session::get('alert-type','info') }}"
+     switch(type){
+        case 'info':
+        toastr.info(" {{ Session::get('message') }} ");
+        break;
+        case 'success':
+        toastr.success(" {{ Session::get('message') }} ");
+        break;
+        case 'warning':
+        toastr.warning(" {{ Session::get('message') }} ");
+        break;
+        case 'error':
+        toastr.error(" {{ Session::get('message') }} ");
+        break;
+     }
+     @endif
+    </script>
+
 
 </body>
 

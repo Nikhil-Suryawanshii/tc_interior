@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\LogController;
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Seller\SellerAuthController;
+use App\Http\Controllers\User\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+Route::get('/dashboard', [UserAuthController::class, 'UserDashboard'])->name('dashboard');
 
+Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
+
+Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+
+Route::post('/user/update/password', [UserController::class, 'UserUpdatePassword'])->name('user.update.password');
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
