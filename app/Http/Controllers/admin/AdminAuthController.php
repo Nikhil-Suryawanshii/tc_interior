@@ -64,6 +64,7 @@ class AdminAuthController extends Controller
     public function storeProfile(Request $request): RedirectResponse {
    
         $adminData = Auth::guard('admin')->user();
+        $adminData->username = $request->username;
         $adminData->name = $request->name;
         $adminData->email = $request->email;
         $adminData->phone = $request->phone;

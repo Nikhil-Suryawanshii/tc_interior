@@ -95,4 +95,8 @@ Route::prefix('seller')->group(function () {
     Route::get('/login', [SellerAuthController::class, 'showLoginForm'])->name('seller.login');
     Route::post('/login', [SellerAuthController::class, 'login']);
     Route::post('/logout', [SellerAuthController::class, 'logout'])->name('seller.logout');
+    Route::get('/profile', [SellerAuthController::class, 'showProfile'])->name('seller.profile');
+    Route::post('/profile/store', [SellerAuthController::class, 'storeProfile'])->name('seller.profile.store');
+    Route::get('/change/password',[SellerAuthController::class, 'changePassword'])->name('seller.changePassword');
+    Route::post('/update/password+',[SellerAuthController::class, 'updatePassword'])->name('seller.updatePassword');
 });
