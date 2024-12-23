@@ -26,7 +26,7 @@
                         <div class="col-md-6">
                             <label for="inputLastName" class="form-label">Surname</label>
                             <input type="text" name="surname" class="form-control" id="inputLastName"
-                                value="{{ old('surname', $student->surname) }}" required>
+                                value="{{ old('surname', $student->username) }}" required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>

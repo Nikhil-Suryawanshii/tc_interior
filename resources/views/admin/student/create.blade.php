@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputLastName" class="form-label">Surname</label>
-                            <input type="text" name="surname" class="form-control" id="inputLastName" value="{{ old('surname') }}" required>
+                            <input type="text" name="username" class="form-control" id="inputLastName" value="{{ old('surname') }}" required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail" class="form-label">Email</label>

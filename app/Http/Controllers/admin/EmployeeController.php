@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\Http\Controllers\Controller;
 class EmployeeController extends Controller
 {
        public function create(){
         return view('admin.employee.create');
        }
-    
+
        public function list()
         {
             $sql = "SELECT * FROM employees";
@@ -77,7 +77,7 @@ class EmployeeController extends Controller
         {
             // Execute a raw SQL query to get the employee by ID
             $employee = DB::select('SELECT * FROM employees WHERE id = ?', [$id]);
-            // Since `DB::select()` returns an array of results, 
+            // Since `DB::select()` returns an array of results,
             // we need to access the first element if we expect only one record
             $employee = $employee ? $employee[0] : null;
 
@@ -151,16 +151,16 @@ class EmployeeController extends Controller
         }
 
         // Generate the raw SQL update query
-        $sql = 'UPDATE employees SET 
-                name = ?, 
-                surname = ?, 
-                email = ?, 
-                phone_number = ?, 
-                profile_image = ?, 
-                joining_date = ?, 
-                gender = ?, 
-                state = ?, 
-                file = ? 
+        $sql = 'UPDATE employees SET
+                name = ?,
+                surname = ?,
+                email = ?,
+                phone_number = ?,
+                profile_image = ?,
+                joining_date = ?,
+                gender = ?,
+                state = ?,
+                file = ?
                 WHERE id = ?';
 
         // Execute the raw SQL query
