@@ -321,6 +321,9 @@ class="msg-time float-end">2 hrs ago</span></h6>
                 </li>
             </ul>
         </div>
+        @php
+            $sellerData = Auth::guard('seller')->user();
+        @endphp
         <div class="user-box dropdown">
             <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{ (!empty($sellerData->photo)) ? url('upload/seller_upload/',$sellerData->photo):url('upload/user.png')}}" class="user-img" alt="user avatar">

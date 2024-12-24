@@ -14,22 +14,42 @@
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon"><i class='bx bx-home-circle'></i>
             </div>
-            <div class="menu-title">Dashboard</div>
+            <div class="menu-title">Manager</div>
         </a>
         <ul>
-            <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Default</a>
+            <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
-            <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>eCommerce</a>
-            </li>
-            <li> <a href="dashboard-analytics.html"><i class="bx bx-right-arrow-alt"></i>Analytics</a>
-            </li>
-            <li> <a href="dashboard-digital-marketing.html"><i class="bx bx-right-arrow-alt"></i>Digital Marketing</a>
-            </li>
-            <li> <a href="dashboard-human-resources.html"><i class="bx bx-right-arrow-alt"></i>Human Resources</a>
+            <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>List</a>
             </li>
         </ul>
     </li>
     <li>
+        <a href="javascript:;" class="has-arrow">
+            <div class="parent-icon"><i class='bx bx-home-circle'></i>
+            </div>
+            <div class="menu-title">City</div>
+        </a>
+        <ul>
+            <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            </li>
+            <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>List</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" class="has-arrow">
+            <div class="parent-icon"><i class='bx bx-home-circle'></i>
+            </div>
+            <div class="menu-title">State</div>
+        </a>
+        <ul>
+            <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            </li>
+            <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>List</a>
+            </li>
+        </ul>
+    </li>
+    <!-- <li>
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon"><i class="bx bx-category"></i>
             </div>
@@ -322,6 +342,6 @@
             </div>
             <div class="menu-title">Support</div>
         </a>
-    </li>
+    </li> -->
 </ul>
 <!--end navigation-->
