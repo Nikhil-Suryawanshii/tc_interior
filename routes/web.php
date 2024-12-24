@@ -31,11 +31,11 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 Route::get('/dashboard', [UserAuthController::class, 'UserDashboard'])->name('dashboard');
 
-Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
+Route::post('/user/profile/store', [UserAuthController::class, 'UserProfileStore'])->name('user.profile.store');
 
-Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+Route::get('/user/logout', [UserAuthController::class, 'UserLogout'])->name('user.logout');
 
-Route::post('/user/update/password', [UserController::class, 'UserUpdatePassword'])->name('user.update.password');
+Route::post('/user/update/password', [UserAuthController::class, 'UserUpdatePassword'])->name('user.update.password');
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
