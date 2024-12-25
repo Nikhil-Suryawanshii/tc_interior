@@ -348,10 +348,8 @@ class="msg-time float-end">2 hrs ago</span></h6>
                 <li>
                     <div class="dropdown-divider mb-0"></div>
                 </li>
-                <li><form method="POST" action="{{ route('seller.logout') }}" style="display: inline;">
-                    @csrf
-                 <button style="background: none; border: none; padding: 0; color: inherit; cursor: pointer;"><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a></button>
-                </form>
+                <li><a class="dropdown-item" href="{{ route("seller.logout") }}"><i
+                                class='bx bx-log-out-circle'></i><span>Logout</span></a>
                 </li>
             </ul>
         </div>

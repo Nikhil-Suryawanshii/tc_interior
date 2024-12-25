@@ -163,22 +163,22 @@
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
-                                            <a href="{{ route('user.dashboard') }}"><i class="fi fi-rs-user mr-10"></i>My Account</a>
+                                            <a href=""><i class="fi fi-rs-user mr-10"></i>My Account</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('user.dashboard') }}"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
+                                            <a href=""><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('user.dashboard') }}"><i class="fi fi-rs-label mr-10"></i>My Voucher</a>
+                                            <a href=""><i class="fi fi-rs-label mr-10"></i>My Voucher</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('user.dashboard') }}l"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
+                                            <a href="l"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('user.dashboard') }}"><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
+                                            <a href=""><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('user.destroy') }}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>
+                                            <a href=""><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -41,11 +41,14 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.destroy') }}"><i class="fi-rs-sign-out mr-10"></i>Logout</a>
+                                        <a class="nav-link" href=""><i class="fi-rs-sign-out mr-10"></i>Logout</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        @php
+                            $userData = Auth::guard('web')->user();
+                        @endphp
                         <div class="col-md-9">
                             <div class="tab-content account dashboard-content pl-50">
                                 <div class="tab-pane fade active show" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">

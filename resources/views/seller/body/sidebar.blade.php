@@ -30,9 +30,9 @@
             <div class="menu-title">City</div>
         </a>
         <ul>
-            <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            <li> <a href="{{route('city.create')}}"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
-            <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>List</a>
+            <li> <a href="{{route('city.list')}}"><i class="bx bx-right-arrow-alt"></i>List</a>
             </li>
         </ul>
     </li>
@@ -43,9 +43,9 @@
             <div class="menu-title">State</div>
         </a>
         <ul>
-            <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Create</a>
+            <li> <a href="{{ route('state.create') }}"><i class="bx bx-right-arrow-alt"></i>Create</a>
             </li>
-            <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>List</a>
+            <li> <a href="{{ route('state.list') }}"><i class="bx bx-right-arrow-alt"></i>List</a>
             </li>
         </ul>
     </li>

@@ -8,7 +8,8 @@ use App\Http\Controllers\Admin\LogController;
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Seller\SellerAuthController;
 use App\Http\Controllers\User\UserAuthController;
-
+use App\Http\Controllers\Seller\StateController;
+use App\Http\Controllers\Seller\CityController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,11 +32,14 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 Route::get('/dashboard', [UserAuthController::class, 'UserDashboard'])->name('dashboard');
 
-Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
+Route::post('/user/profile/store', [UserAuthController::class, 'UserProfileStore'])->name('user.profile.store');
 
-Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+Route::get('/user/logout', [UserAuthController::class, 'userDestroy'])->name('user.destroy');
 
-Route::post('/user/update/password', [UserController::class, 'UserUpdatePassword'])->name('user.update.password');
+Route::post('/user/update/password', [UserAuthController::class, 'userUpdatePassword'])->name('user.update.password');
+
+
+
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
@@ -94,9 +98,26 @@ Route::prefix('seller')->group(function () {
 
     Route::get('/login', [SellerAuthController::class, 'showLoginForm'])->name('seller.login');
     Route::post('/login', [SellerAuthController::class, 'login']);
-    Route::post('/logout', [SellerAuthController::class, 'logout'])->name('seller.logout');
+    Route::get('/logout', [SellerAuthController::class, 'logout'])->name('seller.logout');
     Route::get('/profile', [SellerAuthController::class, 'showProfile'])->name('seller.profile');
     Route::post('/profile/store', [SellerAuthController::class, 'storeProfile'])->name('seller.profile.store');
     Route::get('/change/password',[SellerAuthController::class, 'changePassword'])->name('seller.changePassword');
-    Route::post('/update/password+',[SellerAuthController::class, 'updatePassword'])->name('seller.updatePassword');
+    Route::post('/update/password',[SellerAuthController::class, 'updatePassword'])->name('seller.updatePassword');
+
+    
+     //State Routes
+     Route::get('/state/create',[StateController::class,'create'])->name('state.create');
+     Route::get('/state/list',[StateController::class,'list'])->name('state.list');
+     Route::post('/state/store',[StateController::class, 'store'])->name('state.store');
+     Route::get('/state/edit/{id}',[StateController::class,'edit'])->name('state.edit');
+     Route::post('/state/update/{id}',[StateController::class,'update'])->name('state.update');
+     Route::get('/state/delete/{id}', [StateController::class, 'delete'])->name('state.delete');
+
+     //City Routes
+     Route::get('/city/create',[CityController::class,'create'])->name('city.create');
+     Route::get('/city/list',[CityController::class,'list'])->name('city.list');
+     Route::post('/city/store',[CityController::class, 'store'])->name('city.store');
+     Route::get('/city/edit/{id}',[CityController::class,'edit'])->name('city.edit');
+     Route::post('/city/update/{id}',[CityController::class,'update'])->name('city.update');
+     Route::get('/city/delete/{id}', [CityController::class, 'delete'])->name('city.delete');
 });
