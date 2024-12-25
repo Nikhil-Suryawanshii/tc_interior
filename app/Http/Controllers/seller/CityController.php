@@ -30,7 +30,7 @@ class CityController extends Controller
 
         City::create($request->all());
 
-        return redirect()->route('seller.city.list')->with('success', 'City added successfully.');
+        return redirect()->route('city.list')->with('success', 'City added successfully.');
     }
 
     public function list()
