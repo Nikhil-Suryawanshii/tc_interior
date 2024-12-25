@@ -33,6 +33,7 @@ require __DIR__.'/auth.php';
 Route::get('/dashboard', [UserAuthController::class, 'UserDashboard'])->name('dashboard');
 
 Route::post('/user/profile/store', [UserAuthController::class, 'UserProfileStore'])->name('user.profile.store');
+<<<<<<< HEAD
 
 Route::get('/user/logout', [UserAuthController::class, 'userDestroy'])->name('user.destroy');
 
@@ -40,6 +41,12 @@ Route::post('/user/update/password', [UserAuthController::class, 'userUpdatePass
 
 
 
+=======
+
+Route::get('/user/logout', [UserAuthController::class, 'UserLogout'])->name('user.logout');
+
+Route::post('/user/update/password', [UserAuthController::class, 'UserUpdatePassword'])->name('user.update.password');
+>>>>>>> 2b1aaa4e0d3079e2b4c2b07ad38596d4724abfc6
 
 // Admin Routes
 Route::prefix('admin')->group(function () {
